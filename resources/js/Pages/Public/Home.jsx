@@ -31,7 +31,7 @@ export default function Home() {
                             fontWeight: 'bold'
                         }}
                     >
-                        Découvrir les sports
+                        Découvrir la liste des sports
                     </a>
                     <a 
                         href="/inscription" 
