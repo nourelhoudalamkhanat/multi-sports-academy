@@ -19,9 +19,9 @@ class RegisteredUserController extends Controller
     /**
      * Display the registration view.
      */
-    public function create(): Response
+    public function create(): RedirectResponse
     {
-        return Inertia::render('Auth/Register');
+        return redirect()->route('home');
     }
 
     /**
@@ -35,18 +35,28 @@ class RegisteredUserController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|lowercase|email|max:255|unique:'.User::class,
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'role' => 'required|in:athlete,coach', // ← AJOUTÉ
         ]);
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'role' => $request->role, // ← AJOUTÉ
         ]);
 
         event(new Registered($user));
 
         Auth::login($user);
 
-        return redirect(route('dashboard', absolute: false));
+         // Redirection selon le rôle
+    return redirect()->intended(
+        match($user->role) {
+            'admin' => route('admin.dashboard'),
+            'coach' => route('coach.dashboard'),
+            'athlete' => route('athlete.dashboard'),
+            default => route('home'),
+        }
+    );
     }
 }

@@ -17,6 +17,21 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->enum('role', ['admin', 'coach', 'athlete'])->default('athlete');
+            
+            // Infos coach (NULL si pas coach)
+            $table->string('speciality')->nullable();
+            $table->integer('experience')->nullable();
+            $table->text('bio')->nullable();
+            $table->string('certification')->nullable();
+            
+            // Infos athlete (NULL si pas athlete)
+            $table->integer('age')->nullable();
+            $table->enum('level', ['debutant', 'intermediaire', 'avance'])->nullable();
+            
+            // Commun
+            $table->string('phone')->nullable();
+            $table->string('avatar')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

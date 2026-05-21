@@ -22,7 +22,7 @@ export default function Header() {
             <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
-                    <div className="flex-shrink-0 flex items-center gap-3">
+                    <div className="shrink-0 flex items-center gap-3">
                         <ApplicationLogo className="h-10 w-10" />
                         <Link 
                             href="/" 
@@ -37,31 +37,31 @@ export default function Header() {
                     <div className="hidden md:flex items-center space-x-8">
                         <button 
                             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                            className="text-white hover:text-yellow-400 transition-colors duration-300 bg-transparent border-none cursor-pointer"
+                            className="text-white hover:text-yellow-400 transition-all duration-300 bg-transparent border-none cursor-pointer transform hover:scale-105"
                         >
                             Accueil
                         </button>
                         <button 
                             onClick={() => scrollToSection('programmes')}
-                            className="text-white hover:text-yellow-400 transition-colors duration-300 bg-transparent border-none cursor-pointer"
+                            className="text-white hover:text-yellow-400 transition-all duration-300 bg-transparent border-none cursor-pointer transform hover:scale-105"
                         >
                             Programmes
                         </button>
                         <button 
                             onClick={() => scrollToSection('sports')}
-                            className="text-white hover:text-yellow-400 transition-colors duration-300 bg-transparent border-none cursor-pointer"
+                            className="text-white hover:text-yellow-400 transition-all duration-300 bg-transparent border-none cursor-pointer transform hover:scale-105"
                         >
                             Sports
                         </button>
                         <button 
                             onClick={() => scrollToSection('statistiques')}
-                            className="text-white hover:text-yellow-400 transition-colors duration-300 bg-transparent border-none cursor-pointer"
+                            className="text-white hover:text-yellow-400 transition-all duration-300 bg-transparent border-none cursor-pointer transform hover:scale-105"
                         >
                             Statistiques
                         </button>
                         <button 
                             onClick={() => scrollToSection('equipes')}
-                            className="text-white hover:text-yellow-400 transition-colors duration-300 bg-transparent border-none cursor-pointer"
+                            className="text-white hover:text-yellow-400 transition-all duration-300 bg-transparent border-none cursor-pointer transform hover:scale-105"
                         >
                             Équipes
                         </button>
@@ -76,8 +76,8 @@ export default function Header() {
                     {/* Auth Buttons */}
                     <div className="hidden md:flex items-center space-x-4">
                         <Link 
-                            href="/login" 
-                            className="text-white hover:text-yellow-400 transition-colors duration-300"
+                            href={route('login')}
+                            className="text-white hover:text-yellow-400 transition-all duration-300 transform hover:scale-105"
                         >
                             Login
                         </Link>
@@ -125,46 +125,46 @@ export default function Header() {
                         <div className="flex flex-col space-y-3">
                             <button 
                                 onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); setIsMenuOpen(false); }}
-                                className="text-white hover:text-yellow-400 transition-colors duration-300 bg-transparent border-none cursor-pointer text-left"
+                                className="text-white hover:text-yellow-400 transition-all duration-300 bg-transparent border-none cursor-pointer text-left transform hover:scale-105"
                             >
                                 Accueil
                             </button>
                             <button 
                                 onClick={() => scrollToSection('programmes')}
-                                className="text-white hover:text-yellow-400 transition-colors duration-300 bg-transparent border-none cursor-pointer text-left"
+                                className="text-white hover:text-yellow-400 transition-all duration-300 bg-transparent border-none cursor-pointer text-left transform hover:scale-105"
                             >
                                 Programmes
                             </button>
                             <button 
                                 onClick={() => scrollToSection('sports')}
-                                className="text-white hover:text-yellow-400 transition-colors duration-300 bg-transparent border-none cursor-pointer text-left"
+                                className="text-white hover:text-yellow-400 transition-all duration-300 bg-transparent border-none cursor-pointer text-left transform hover:scale-105"
                             >
                                 Sports
                             </button>
                             <button 
                                 onClick={() => scrollToSection('statistiques')}
-                                className="text-white hover:text-yellow-400 transition-colors duration-300 bg-transparent border-none cursor-pointer text-left"
+                                className="text-white hover:text-yellow-400 transition-all duration-300 bg-transparent border-none cursor-pointer text-left transform hover:scale-105"
                             >
                                 Statistiques
                             </button>
                             <button 
                                 onClick={() => scrollToSection('equipes')}
-                                className="text-white hover:text-yellow-400 transition-colors duration-300 bg-transparent border-none cursor-pointer text-left"
+                                className="text-white hover:text-yellow-400 transition-all duration-300 bg-transparent border-none cursor-pointer text-left transform hover:scale-105"
                             >
                                 Équipes
                             </button>
                             <button 
                                 onClick={() => scrollToSection('inscription')}
-                                className="text-white hover:text-yellow-400 transition-colors duration-300 bg-transparent border-none cursor-pointer text-left"
+                                className="text-white hover:text-yellow-400 transition-all duration-300 bg-transparent border-none cursor-pointer text-left transform hover:scale-105"
                             >
                                 Inscription
                             </button>
                             <div className="flex flex-col space-y-2 pt-3 border-t border-gray-600">
-                                <Link href="/login" className="text-white hover:text-yellow-400 transition-colors duration-300">Login</Link>
+                                <Link href="/login" className="text-white hover:text-yellow-400 transition-all duration-300 transform hover:scale-105">Login</Link>
                                 <button
                                     type="button"
                                     onClick={() => scrollToSection('inscription')}
-                                    className="px-4 py-2 rounded-lg font-medium text-center transition-all duration-300"
+                                    className="px-4 py-2 rounded-lg font-medium text-center transition-all duration-300 transform hover:scale-105"
                                     style={{ backgroundColor: '#FBBF24', color: '#0F172A' }}
                                 >
                                     Sign Up

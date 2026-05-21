@@ -13,7 +13,14 @@ createInertiaApp({
             import.meta.glob('./Pages/**/*.jsx'),
         ),
     setup({ el, App, props }) {
+        // ✅ AJOUTER CES 2 LIGNES
+        const ziggy = props.initialPage.props.ziggy;
+        globalThis.Ziggy = ziggy;
+        
         const root = createRoot(el);
         root.render(<App {...props} />);
+    },
+    progress: {
+        color: '#4B5563',
     },
 });

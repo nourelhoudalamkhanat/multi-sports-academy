@@ -13,8 +13,7 @@ export default function Footer() {
                             MSA
                         </h3>
                         <p style={{ color: '#6B7280' }}>
-                            MultiSport Academy - Une solution moderne pour gérer votre académie.
-                        </p>
+                           MultiSport Academy — Un lieu pour grandir, s’entraîner et dépasser ses limites.</p>
                     </div>
 
                     {/* Colonne 2 - Liens rapides */}
@@ -52,9 +51,18 @@ export default function Footer() {
                             Contact
                         </h4>
                         <ul className="space-y-2" style={{ color: '#6B7280' }}>
-                            <li>📧 contact@msa.ma</li>
-                            <li>📱 +212 5XX-XXXXXX</li>
-                            <li>📍 Casablanca, Maroc</li>
+                            <li>
+                                <img src="/images/email.png" alt="Email" className="w-5 h-5 inline mr-2" />
+                                multi_sport@msa.ma
+                            </li>
+                            <li>
+                                <img src="/images/phone.png" alt="Phone" className="w-5 h-5 inline mr-2" />
+                                +212 50 123 4567
+                            </li>
+                            <li>
+                                <img src="/images/location.png" alt="Location" className="w-5 h-5 inline mr-2" />
+                                Casablanca, Maroc
+                            </li>
                         </ul>
                     </div>
 
@@ -65,13 +73,13 @@ export default function Footer() {
                         </h4>
                         <div className="flex space-x-4">
                             <a href="#" className="hover:text-yellow-400 transition-colors duration-300 text-2xl" style={{ color: '#6B7280' }}>
-                                📘
+                                <img src="/images/facebook.png" alt="Facebook" className="w-8 h-8" />
                             </a>
                             <a href="#" className="hover:text-yellow-400 transition-colors duration-300 text-2xl" style={{ color: '#6B7280' }}>
-                                📷
+                                <img src="/images/instagram.png" alt="Instagram" className="w-8 h-8" />
                             </a>
                             <a href="#" className="hover:text-yellow-400 transition-colors duration-300 text-2xl" style={{ color: '#6B7280' }}>
-                                ▶️
+                                <img src="/images/linkedin.png" alt="LinkedIn" className="w-8 h-8" />
                             </a>
                         </div>
                     </div>
